@@ -1,0 +1,90 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>CPMS</Name>
+    <ProjectGuid>{cad34f03-05b6-49b4-92d5-c7039ab85145}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include=".vs\CPMS\config\applicationhost.config" />
+    <Compile Include=".vs\CPMS\v16\.suo" />
+    <Compile Include=".vs\FrontEnd\config\applicationhost.config" />
+    <Compile Include=".vs\ProjectSettings.json" />
+    <Compile Include=".vs\slnx.sqlite" />
+    <Compile Include=".vs\VSWorkspaceState.json" />
+    <Compile Include="Archived\App.js" />
+    <Compile Include="Archived\main.html" />
+    <Compile Include="Archived\style.css" />
+    <Compile Include="database\CPMS Database Creation Script.sql" />
+    <Compile Include="SAFE_FrontEnd\assets\demo\chart-area-demo.js" />
+    <Compile Include="SAFE_FrontEnd\assets\demo\chart-bar-demo.js" />
+    <Compile Include="SAFE_FrontEnd\assets\demo\chart-pie-demo.js" />
+    <Compile Include="SAFE_FrontEnd\assets\demo\datatables-demo.js" />
+    <Compile Include="SAFE_FrontEnd\assets\img\error-404-monochrome.svg" />
+    <Compile Include="SAFE_FrontEnd\DataSource.php" />
+    <Compile Include="SAFE_FrontEnd\css\styles.css" />
+    <Compile Include="SAFE_FrontEnd\submitAuthor.php" />
+    <Compile Include="SAFE_FrontEnd\js\datatables-simple-demo.js" />
+    <Compile Include="SAFE_FrontEnd\js\scripts.js" />
+    <Compile Include="SAFE_FrontEnd\401.html" />
+    <Compile Include="SAFE_FrontEnd\404.html" />
+    <Compile Include="SAFE_FrontEnd\500.html" />
+    <Compile Include="SAFE_FrontEnd\authorInfo.html" />
+    <Compile Include="SAFE_FrontEnd\authorInfo.php" />
+    <Compile Include="SAFE_FrontEnd\charts.html" />
+    <Compile Include="SAFE_FrontEnd\index.html" />
+    <Compile Include="SAFE_FrontEnd\layout-sidenav-light.html" />
+    <Compile Include="SAFE_FrontEnd\layout-static.html" />
+    <Compile Include="SAFE_FrontEnd\login.html" />
+    <Compile Include="SAFE_FrontEnd\homeAuthor.php" />
+    <Compile Include="SAFE_FrontEnd\loginReviewerNULL.php" />
+    <Compile Include="SAFE_FrontEnd\loginAction.php" />
+    <Compile Include="SAFE_FrontEnd\password.html" />
+    <Compile Include="SAFE_FrontEnd\register.html" />
+    <Compile Include="SAFE_FrontEnd\homeReviewer.php" />
+    <Compile Include="SAFE_FrontEnd\tables.html" />
+    <Compile Include="SAFE_FrontEnd\connection.php" />
+    <Compile Include="SAFE_FrontEnd\regReviewer.php" />
+    <Compile Include="SAFE_FrontEnd\registerAuthor.php" />
+    <Compile Include="SAFE_FrontEnd\loginAdminNULL.php" />
+    <Compile Include="SAFE_FrontEnd\test.html" />
+    <Compile Include="SAFE_FrontEnd\config.php" />
+    <Compile Include="CPMS.phpproj" />
+    <Compile Include="CPMS.phpproj.user" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\CPMS\config" />
+    <Folder Include=".vs\CPMS\v16" />
+    <Folder Include=".vs\CPMS" />
+    <Folder Include=".vs\FrontEnd\config" />
+    <Folder Include=".vs\FrontEnd\v16" />
+    <Folder Include=".vs\FrontEnd" />
+    <Folder Include=".vs" />
+    <Folder Include="Archived" />
+    <Folder Include="database" />
+    <Folder Include="database\PaperUpload\" />
+    <Folder Include="SAFE_FrontEnd\assets\demo" />
+    <Folder Include="SAFE_FrontEnd\assets\img" />
+    <Folder Include="SAFE_FrontEnd\assets" />
+    <Folder Include="SAFE_FrontEnd\css" />
+    <Folder Include="SAFE_FrontEnd\js" />
+    <Folder Include="SAFE_FrontEnd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SAFE_FrontEnd\submitAuthor.html" />
+    <Content Include="SAFE_FrontEnd\homeAuthor.html" />
+    <Content Include="SAFE_FrontEnd\homeReviewer.html" />
+    <Content Include="SAFE_FrontEnd\js\loginValid.js" />
+    <Content Include="SAFE_FrontEnd\registerReviewer.html" />
+    <Content Include="SAFE_FrontEnd\registerAuthor.html" />
+  </ItemGroup>
+</Project>

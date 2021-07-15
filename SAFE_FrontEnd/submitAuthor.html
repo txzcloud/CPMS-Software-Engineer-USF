@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Author Submission Form</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="homeAuthor.php">CPMS</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="settingAuthor.html" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="settingAuthor.html">Account Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!--Left Side Nav Buttons-->
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <!--
+                            <div class="sb-sidenav-menu-heading">Home</div>
+                            <a class="nav-link" href="authorInfo.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Personal Information
+                            </a>
+                            -->
+
+                            <!--Missing code placed in test.html sec 1.0-->
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+
+                            <a class="nav-link" href="homeAuthor.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Home
+                            </a>
+
+                            <a class="nav-link" href="submitAuthor.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Submit Paper
+                            </a>
+
+                      
+
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Author
+                        
+                        <a class="nav-link" href="login.html"> 
+                        Logout                           
+                        </a>
+
+
+
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Paper Submission</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Upload Paper</li>
+                        </ol>
+                        <hr>
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+
+                            </div>
+                        </div>
+                        <div class="row">
+
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Submit your paper below
+                            </div>
+                            <!--table canvas-->
+                            <div class="card-body">
+                                <form action="submitAuthor.php" method="POST" enctype="multipart/form-data">
+
+                                    <div>
+                                        <h6>Please attach PDF documents only.</h6>
+                                        <input type="file" name="file" ></input>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <h6>Paper Title</h6>
+                                        <input type="text" name="title" required autofocus></input>
+                                    </div>
+
+                                    <br/>
+
+                                    <div>
+                                        <h6>Certification</h6>
+                                        <input type="text" name="certification" required></input>
+                                    </div>
+
+                                    <br/>
+
+                                    <div >
+                                        <h6>Notes to Reviewers</h6>
+                                        <textarea name="NTR"></textarea>
+                                    </div>
+
+                                    <br />
+
+                                    <h6>Please indicate the topics that most closely apply to your paper.</h6>
+                         
+                                    
+                                    <div>
+                                        <table>
+                                        
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" name="AoA" value="AoA" >Analysis of Algorithms
+                                                </td>
+                                              
+                                                <td>
+                                                    <input type="checkbox" name="DistS" value="DistS" >Distributed Systems
+                                                </td>
+
+                                                <td>
+                                                    <input type="checkbox" name="MIC" value="MIC" >Mathematics in Computing
+                                                </td>
+
+                                                <td>
+                                                    <input type="checkbox" name="Research" value="Research" >Research
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" name="Applications" value="Applications" >Applications
+                                                </td>
+                                              
+                                                <td>
+                                                    <input type="checkbox" name="ESI" value="ESI" >Ethical/Social Issues
+                                                </td>
+
+                                                <td>
+                                                    <input type="checkbox" name="MM" value="MM" >Multimedia
+                                                </td>
+
+                                                <td>
+                                                    <input type="checkbox" name="Security" value="Security" >Security
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" name="Architecture" value="Architecture" >Architecture
+                                                </td>
+                                              
+                                                <td>
+                                                    <input type="checkbox" name="FYC" value="FYC" >First Year Computing
+                                                </td>
+
+                                                <td>
+                                                    <input type="checkbox" name="NDC" value="NDC" >Networking/Data Communications
+                                                </td>
+
+                                                <td>
+                                                    <input type="checkbox" name="SE" value="SE" >Software Engineering
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" name="AI" value="AI" >Artificial Intelligence
+                                                </td>
+                                              
+                                                <td>
+                                                    <input type="checkbox" name="GI" value="GI" >Gender Issues
+                                                </td>
+
+                                                <td>
+                                                    <input type="checkbox" name="NMC" value="NMC" >Non-Major Courses
+                                                </td>
+
+                                                <td>
+                                                    <input type="checkbox" name="SAD" value="SAD" >Systems Analysis and Designs
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" name="CE" value="CE" >Computer Engineering
+                                                </td>
+                                              
+                                                <td>
+                                                    <input type="checkbox" name="GW" value="GW" >Grant Writing
+                                                </td>
+
+                                                <td>
+                                                    <input type="checkbox" name="OOI" value="OOI" >Object Oriented Issues
+                                                </td>
+
+                                                <td>
+                                                    <input type="checkbox" name="UTC" value="UTC" >Using Technology in The Classroom
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" name="Curriculum" value="Curriculum" >Curriculum
+                                                </td>
+                                              
+                                                <td>
+                                                    <input type="checkbox" name="GIP" value="GIP" >Graphics Image Processing
+                                                </td>
+
+                                                <td>
+                                                    <input type="checkbox" name="OS" value="OS" >Operating Systems
+                                                </td>
+
+                                                <td>
+                                                    <input type="checkbox" name="WIP" value="WIP" >Web and Internet Programming
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" name="DS" value="DS" >Data Structures
+                                                </td>
+                                              
+                                                <td>
+                                                    <input type="checkbox" name="HCI" value="HCI" >Human Communication Interface
+                                                </td>
+
+                                                <td>
+                                                    <input type="checkbox" name="PP" value="PP" >Parallel Processing
+                                                </td>
+
+                                                <!--put other comment here. change to text field-->
+                                                <td>
+                                               
+                                                    <input type="checkbox" name="Other" value="Other">Other
+                                                    <input type="text" name="OtherDescription" placeholder="Other{Describe}" >
+                                                 
+                                                </td>
+                                      
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" name="DB" value="DB" >Databases
+                                                </td>
+                                              
+                                                <td>
+                                                    <input type="checkbox" name="LE" value="LE" >Laboratory Environments
+                                                </td>
+
+                                                <td>
+                                                    <input type="checkbox" name="Pedagogy" value="Pedagogy" >Pedagogy
+                                                </td>
+
+                                           
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" name="DL" value="DL" >Distance Learning
+                                                </td>
+                                              
+                                                <td>
+                                                    <input type="checkbox" name="Literacy" value="Literacy" >Literacy
+                                                </td>
+
+                                                <td>
+                                                    <input type="checkbox" name="PL" value="PL" >Programming Language
+                                                </td>
+
+                                            </tr>
+                                            
+                                            
+                
+                                        </table>
+                                    </div>
+
+                                    <br/>
+                                    <br/>
+                                    <div>
+                                        <input type="submit" class="btn btn-primary" name="upload" value="Upload">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; www.safe.com 2021</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+
+    </body>
+</html>
